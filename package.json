@@ -1,13 +1,20 @@
 {
+  "homepage": "http://adarshperi.github.io/Timer",
   "name": "timer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "fsevents": "1.2.8",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "yarn run cleanup && gh-pages -b master -d build",
+    "cleanup": "rm -rf node_modules/gh-pages/.cache",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
