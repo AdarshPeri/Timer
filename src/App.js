@@ -19,10 +19,7 @@ class App extends Component {
           this.setState({remainingTime:this.state.remainingTime-1})
           
         }
-        else{
-          clearInterval(this.time);
-        
-        }
+      
         },1000);
      
   }
